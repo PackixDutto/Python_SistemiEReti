@@ -16,7 +16,7 @@ packi.color(colore)
 
 packi.fillcolor(colore)
 
-packi.begin_fill()
+packi.begin_fill() #inzia a riempire
 
 for i in range(0, facce):
     
