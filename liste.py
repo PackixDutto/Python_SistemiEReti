@@ -6,7 +6,7 @@ def print_list(l):
 
 def main():
     # Le liste
-    l = [1, 2, 3, 4, "c", 3.14, "pythom"]
+    l = [1, 2, 3, 4, "c", 3.14, "python"]
     r = [10, 11, 12]
     print_list(l+r) #concatenazione tra due liste
     print_list(3*r) #concatenazione multipla
