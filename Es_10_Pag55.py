@@ -2,20 +2,25 @@
 #2) Sostituire il quarto voto con un 10 3) Stampare i primi 3 voti della lista
 
 def main():
-    lista = []
-    k=0
+    lista_voti = []
+    k = 0
 
     while True:
-            voto = int(input("inserisci un voto(-1 per interrompere): "))
-            if(voto < 0 and k>= 6):
-                break
-                lista.append(voto)
-                k = 1
+        voto = int(input("Inserisci un voto (-1 per interrompere): "))
+        if voto < 0 and k >= 6:
+            break
+        lista_voti.append(voto)
+        k += 1
 
-    print(f"Lista senza il 1° e l'ultimo voto: {lista[1:-1]}")
-    lista[3] = 10
-    print(f"Lista con il 4° voto sostituito con un 10: {lista}")
-    print(f"Lista con solo i primi 3 voti: {lista[0:3]}") #Stampo dal primo carattere al 3 incluso
+    print(f"Lista senza il 1° e l'ultimo voto: {lista_voti[1:-1]}")
+    
+    if len(lista_voti) >= 4:
+        lista_voti[3] = 10
+        print(f"Lista con il 4° voto sostituito con un 10: {lista_voti}")
+    else:
+        print("Non ci sono abbastanza voti per sostituire il quarto voto.")
+
+    print(f"Lista con solo i primi 3 voti: {lista_voti[:3]}")  # Stampo dal primo voto al terzo incluso
 
 if __name__ == "__main__":
     main()
